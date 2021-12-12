@@ -8,3 +8,5 @@ cat <<EOT>>/root/.ssh/config
 Host *
     StrictHostKeyChecking no
 EOT
+#fix awful cr-lf bug
+sed -i 's/\r$//g' /vagrant/fixScripts/exercise6-fix.sh
